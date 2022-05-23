@@ -4,6 +4,7 @@
 //Step 4: Start page is hidden, only displaying the question page
 //Step 5: After click, show the status of "Correct!" or "Wrong!" based on answer
 //Step 5a: Wrong answers should decrease the timer by 15 seconds. If you answer correctly, there is no penalty on the clock.
-//Step 6: After all questions are answered, you will be presented with the high score page to add your initials alongside your score and hit submit button to save it in local storage.
-//Step 7: Timer should be stopped when all questions are answered.
-//Step 8: Time leftover should become your score at the end.
+//Step 6: After all questions are answered, you will be presented with the high score page to add your initials alongside previous high scores and hit submit button to save it in local storage.
+//Step 6a: Timer should be stopped when all questions are answered.
+//Step 6b: Time leftover should become your score at the end.
+//Step 6c: When you hit submit, it should add your score and initials to local storage.
