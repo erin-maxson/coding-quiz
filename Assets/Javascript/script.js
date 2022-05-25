@@ -8,3 +8,18 @@
 //Step 6a: Timer should be stopped when all questions are answered.
 //Step 6b: Time leftover should become your score at the end.
 //Step 6c: When you hit submit, it should add your score and initials to local storage.
+
+
+var introEl = document.querySelector('#intro');
+var questionEl = document.query('#questions');
+var timerEl = document.querySelector('#timer');
+var inputEl = document.querySelector('#input-init');
+var startQuizBtn = document.querySelector('#start-btn');
+
+
+function startGame() {
+
+}
+
+startQuizBtn.addEventListener("click", startGame)
+
