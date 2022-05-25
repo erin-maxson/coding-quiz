@@ -20,7 +20,7 @@ var answer2El = document.querySelector('#answer2');
 var answer3El = document.querySelector('#answer3');
 var answer4El = document.querySelector('#answer4');
 
-var startQuizBtn = document.querySelector('#start-btn');
+var startQuizBtn = document.querySelector('#startbtn');
 
 var timeRemains = 75
 var clockID = []
@@ -32,6 +32,8 @@ var question = [ {
 }]
 
 var index=0
+
+startQuizBtn.addEventListener("click", startGame)
 
 function countDown() {
     timerEl.textContent=timeRemains
@@ -61,7 +63,4 @@ answer1El.addEventListener("click", nextQuestion)
 answer2El.addEventListener("click", nextQuestion)
 answer3El.addEventListener("click", nextQuestion)
 answer4El.addEventListener("click", nextQuestion)
-
-
-startQuizBtn.addEventListener("click", startGame)
 
