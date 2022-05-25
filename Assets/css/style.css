@@ -1,5 +1,7 @@
 header {
     display: flex;
+    background-color: purple;
+    color: white;
 }
 
 #high-score {
