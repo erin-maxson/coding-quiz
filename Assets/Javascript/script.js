@@ -16,6 +16,14 @@ var timerEl = document.querySelector('#timer');
 var inputEl = document.querySelector('#input-init');
 var startQuizBtn = document.querySelector('#start-btn');
 
+var timeRemains = 75
+
+function countDown() {
+    timerEl.textContent=timeRemains
+    timeRemains--
+    
+}
+
 
 function startGame() {
 
