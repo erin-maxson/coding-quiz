@@ -6,6 +6,10 @@ header {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.hide {
+    display: none;
+}
+
 #high-score {
     width: 80%;
 }
@@ -13,3 +17,4 @@ header {
 #timer {
     width: 20%;
 }
+
