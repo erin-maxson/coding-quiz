@@ -33,8 +33,6 @@ var question = [ {
 
 var index=0
 
-startQuizBtn.addEventListener("click", startGame)
-
 function countDown() {
     timerEl.textContent=timeRemains
     timeRemains--
@@ -55,6 +53,8 @@ function displayQuestions() {
 }
 
 function nextQuestion() {
+    index++
+    displayQuestions()
 
 }
 
@@ -63,3 +63,4 @@ answer2El.addEventListener("click", nextQuestion)
 answer3El.addEventListener("click", nextQuestion)
 answer4El.addEventListener("click", nextQuestion)
 
+startQuizBtn.addEventListener("click", startGame)
