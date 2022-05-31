@@ -27,8 +27,13 @@ var clockID = []
 
 var question = [ {
     title: "new question 1",
-    answers: ["Answer1, Answer 2, Answer 3, Answer 4"],
+    answers: ["Answer1, Answer2, Answer3, Answer4"],
     solution: "Answer 2"
+},
+
+{   title:"new question 2",
+    answers:["answer1, answer2, answer3, answer4"],
+    solution: "answer2"
 }]
 
 var index=0
