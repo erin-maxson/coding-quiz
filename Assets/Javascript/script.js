@@ -26,15 +26,22 @@ var timeRemains = 75
 var clockID = []
 
 var question = [ {
-    title: "new question 1",
-    answers: ["Answer1, Answer2, Answer3, Answer4"],
-    solution: "Answer 2"
+    title: "What does the abbreviation CSS stand for?",
+    answers: ["Coding Student Strategies", "Cascading Stylesheet", "HTML", "C++ Stylesheets"],
+    solution: "Cascading Stylesheet"
 },
 
-{   title:"new question 2",
-    answers:["answer1, answer2, answer3, answer4"],
-    solution: "answer2"
-}]
+{   title:"What is the abbreviation of Hypertext Markup Language?",
+    answers:["HTML", "CSS", "JS", "None of the above"],
+    solution: "HTML"
+},
+
+{  title:"What must you do before using Bootstrap in your projects?",
+    answers:["Add a reset CSS file", "Setup your HTML file", "Add the Bootstrap Library link to your HTML", "All of the above"],
+    solution: "All of the above"
+}
+
+]
 
 var index=0
 
