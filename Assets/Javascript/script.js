@@ -39,6 +39,11 @@ var question = [ {
 {  title:"What must you do before using Bootstrap in your projects?",
     answers:["Add a reset CSS file", "Setup your HTML file", "Add the Bootstrap Library link to your HTML", "All of the above"],
     solution: "All of the above"
+},
+
+{  title:"How does CSS give priority to elements inside the file?",
+    answers:["IDs have less precedence than Elements", "Universal Selector has precedence over all", "IDs have the highest precedence", "None of the above"],
+    solution: "IDs have the highest precedence"
 }
 
 ]
