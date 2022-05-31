@@ -9,19 +9,29 @@
 //Step 6b: Time leftover should become your score at the end.
 //Step 6c: When you hit submit, it should add your score and initials to local storage.
 
-
+// Intro Variable
 var introEl = document.querySelector('#intro');
+// Questions Variable
 var questionEl = document.querySelector('#questions');
+// Timer Variable
 var timerEl = document.querySelector('#timer');
+// Input Variable for Scoreboard w/ Initials
 var inputEl = document.querySelector('#input-init');
+// Title Variable
 var titleEl = document.querySelector('#title');
+// Answer #1 Variable
 var answer1El = document.querySelector('#answer1');
+// Answer #2 Variable
 var answer2El = document.querySelector('#answer2');
+// Answer #3 Variable
 var answer3El = document.querySelector('#answer3');
+// Answer #4 Variable
 var answer4El = document.querySelector('#answer4');
 
+// Start Quiz Button Selector
 var startQuizBtn = document.querySelector('#startbtn');
 
+// Timer Settings
 var timeRemains = 75
 var clockID = []
 
@@ -52,11 +62,13 @@ var question = [ {
 
 var index=0
 
+// Timer Countdown Function
 function countDown() {
     timerEl.textContent=timeRemains
     timeRemains--
 }
 
+// startGame Function
 function startGame() {
     questionEl.classList.remove("hide");
     introEl.classList.add("hide");
@@ -64,6 +76,7 @@ function startGame() {
     displayQuestions();
 }
 
+// displayQuestions Function
 function displayQuestions() {
     titleEl.textContent=question[index].title
     answer1El.textContent = question[index].answers[0]
@@ -72,15 +85,18 @@ function displayQuestions() {
     answer4El.textContent = question[index].answers[3]
 }
 
+// nextQuestion Function
 function nextQuestion() {
     index++
     displayQuestions()
 
 }
 
+// Clicking an answer leads to the next question
 answer1El.addEventListener("click", nextQuestion)
 answer2El.addEventListener("click", nextQuestion)
 answer3El.addEventListener("click", nextQuestion)
 answer4El.addEventListener("click", nextQuestion)
 
+// start of game by clicking the start button
 startQuizBtn.addEventListener("click", startGame)
