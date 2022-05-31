@@ -11,7 +11,7 @@
 
 
 var introEl = document.querySelector('#intro');
-var questionEl = document.query('#questions');
+var questionEl = document.querySelector('#questions');
 var timerEl = document.querySelector('#timer');
 var inputEl = document.querySelector('#input-init');
 var titleEl = document.querySelector('#title');
