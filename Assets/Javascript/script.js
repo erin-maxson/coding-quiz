@@ -38,7 +38,6 @@ startQuizBtn.addEventListener("click", startGame)
 function countDown() {
     timerEl.textContent=timeRemains
     timeRemains--
-
 }
 
 function startGame() {
