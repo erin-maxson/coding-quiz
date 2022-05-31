@@ -46,10 +46,11 @@ function startGame() {
 }
 
 function displayQuestions() {
-    titleEl.textContent = question[index].answers[0]
-    answer1El.textContent = question[index].answers[1]
-    answer2El.textContent = question[index].answers[2]
-    answer3El.textContent = question[index].answers[3]
+    titleEl.textContent=question[index].title
+    answer1El.textContent = question[index].answers[0]
+    answer2El.textContent = question[index].answers[1]
+    answer3El.textContent = question[index].answers[2]
+    answer4El.textContent = question[index].answers[3]
 }
 
 function nextQuestion() {
