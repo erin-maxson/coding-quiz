@@ -60,6 +60,26 @@ var question = [ {
 
 ]
 
+if (answer1El==="Cascading StyleSheet") {
+    timerEl.textContent= (timeRemains);
+}
+
+if (answer2El==="HTML") {
+    timerEl.textContent= (timeRemains);
+}
+
+if (answer3El==="All of the above") {
+    timerEl.textContent= (timeRemains);
+}
+
+if (answer4El==="IDs have the highest precedence") {
+    timerEl.textContent= (timeRemains);
+}
+
+else {
+    timerEl.textContent= (timeRemains - 5);
+}
+
 var index=0
 
 // Timer Countdown Function
