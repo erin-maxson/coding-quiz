@@ -56,12 +56,12 @@ var question = [ {
     correct: "HTML"
 },
 // Question 3 w/ answers
-{  title:"What must you do before using Bootstrap in your projects?",
+{   title:"What must you do before using Bootstrap in your projects?",
     answers:["Add a reset CSS file", "Setup your HTML file", "Add the Bootstrap Library link to your HTML", "All of the above"],
     correct: "All of the above"
 },
 // Question 4 w/ answers
-{  title:"How does CSS give priority to elements inside the file?",
+{   title:"How does CSS give priority to elements inside the file?",
     answers:["IDs have less precedence than Elements", "Universal Selector has precedence over all", "IDs have the highest precedence", "None of the above"],
     correct: "IDs have the highest precedence"
 }
@@ -74,7 +74,6 @@ var index=0
 function countDown() {
     timerEl.textContent=timeRemains
     timeRemains--
-
 }
 
 // startGame Function
@@ -87,7 +86,7 @@ function startGame() {
 
 // displayQuestions Function
 function displayQuestions() {
-    titleEl.textContent=question[index].title
+    titleEl.textContent = question[index].title
     answer1El.textContent = question[index].answers[0]
     answer2El.textContent = question[index].answers[1]
     answer3El.textContent = question[index].answers[2]
@@ -124,10 +123,8 @@ function timerScore () {
     
 }
 
-
 function inputInitials () {
     enterInputEl.length();
-
 }
 
 function displayScore () {
