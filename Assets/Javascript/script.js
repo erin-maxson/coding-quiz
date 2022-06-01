@@ -17,6 +17,8 @@ var questionEl = document.querySelector('#questions');
 var timerEl = document.querySelector('#timer');
 // Input Variable for Scoreboard w/ Initials
 var inputEl = document.querySelector('#input-init');
+// Score Dashboard Variable
+var scoreBoardEl = document.querySelector('#score-dashboard');
 // Title Variable
 var titleEl = document.querySelector('#title');
 // Answer #1 Variable
@@ -60,26 +62,6 @@ var question = [ {
 
 ]
 
-if (answer1El==="Cascading StyleSheet") {
-    timerEl.textContent= (timeRemains);
-}
-
-if (answer2El==="HTML") {
-    timerEl.textContent= (timeRemains);
-}
-
-if (answer3El==="All of the above") {
-    timerEl.textContent= (timeRemains);
-}
-
-if (answer4El==="IDs have the highest precedence") {
-    timerEl.textContent= (timeRemains);
-}
-
-else {
-    timerEl.textContent= (timeRemains - 5);
-}
-
 var index=0
 
 // Timer Countdown Function
@@ -109,14 +91,48 @@ function displayQuestions() {
 function nextQuestion() {
     index++
     displayQuestions()
+}
 
+function viewDashboard() {
+    scoreBoardEl.classList.remove("hide");
+    inputEl.classList.remove("hide");
+    questionEl.classList.add("hide");
 }
 
 // Clicking an answer leads to the next question
 answer1El.addEventListener("click", nextQuestion)
 answer2El.addEventListener("click", nextQuestion)
 answer3El.addEventListener("click", nextQuestion)
-answer4El.addEventListener("click", nextQuestion)
+answer4El.addEventListener("click", viewDashboard)
+
+
+function inputScore () {
+    
+}
+
+function displayScore () {
+    scoreBoardEl.textContent()
+}
+
+// if (answer1El==="Cascading StyleSheet") {
+//     timerEl.textContent= (timeRemains);
+// }
+
+// if (answer2El==="HTML") {
+//     timerEl.textContent= (timeRemains);
+// }
+
+// if (answer3El==="All of the above") {
+//     timerEl.textContent= (timeRemains);
+// }
+
+// if (answer4El==="IDs have the highest precedence") {
+//     timerEl.textContent= (timeRemains);
+// }
+
+// else {
+//     timerEl.textContent= (timeRemains - 5);
+// }
 
 // start of game by clicking the start button
 startQuizBtn.addEventListener("click", startGame)
