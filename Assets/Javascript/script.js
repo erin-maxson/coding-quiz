@@ -100,6 +100,7 @@ function nextQuestion() {
     displayQuestions()
 }
 
+// View Dashboard -- Hide Questions, Make Scoreboard & Input section visible
 function viewDashboard() {
     scoreBoardEl.classList.remove("hide");
     inputEl.classList.remove("hide");
@@ -118,13 +119,15 @@ answer4El.addEventListener("click", viewDashboard)
 //     }
 // }
 
+
 function timerScore () {
     
 }
 
 
 function inputInitials () {
-    enterInputEl.textContent()
+    enterInputEl.length();
+
 }
 
 function displayScore () {
