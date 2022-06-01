@@ -11,6 +11,8 @@
 
 // Intro Variable
 var introEl = document.querySelector('#intro');
+// High Score Variable
+var highScore = document.querySelector('#high-score');
 // Questions Variable
 var questionEl = document.querySelector('#questions');
 // Timer Variable
@@ -89,14 +91,6 @@ function displayQuestions() {
     answer2El.textContent = question[index].answers[1]
     answer3El.textContent = question[index].answers[2]
     answer4El.textContent = question[index].answers[3]
-
-    if (answers.correct) {
-        timeRemains = --0
-    }
-
-    else {
-        timeRemains = --5
-    }
 }
 
 // nextQuestion Function
@@ -128,24 +122,12 @@ function displayScore () {
 
 // saveEl.addEventListener("click", inputScore)
 
-// if (answer1El==="Cascading StyleSheet") {
-//     timerEl.textContent= (timeRemains);
-// }
-
-// if (answer2El==="HTML") {
-//     timerEl.textContent= (timeRemains);
-// }
-
-// if (answer3El==="All of the above") {
-//     timerEl.textContent= (timeRemains);
-// }
-
-// if (answer4El==="IDs have the highest precedence") {
-//     timerEl.textContent= (timeRemains);
+// if (answers.correct) {
+//     timeRemains = --0
 // }
 
 // else {
-//     timerEl.textContent= (timeRemains - 5);
+//     timeRemains = --5
 // }
 
 // start of game by clicking the start button
