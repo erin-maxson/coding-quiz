@@ -40,6 +40,14 @@ header {
     padding: 10px;
 }
 
+#questions {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#input-init {
+    padding: 15px;
+}
+
 #score-dashboard {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px;
