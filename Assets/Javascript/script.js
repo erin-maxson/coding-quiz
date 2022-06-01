@@ -74,6 +74,7 @@ var index=0
 function countDown() {
     timerEl.textContent=timeRemains
     timeRemains--
+
 }
 
 // startGame Function
@@ -111,9 +112,19 @@ answer2El.addEventListener("click", nextQuestion)
 answer3El.addEventListener("click", nextQuestion)
 answer4El.addEventListener("click", viewDashboard)
 
+// function stopTimer() {
+//     if (viewDashboard) {
+//     clearInterval();
+//     }
+// }
 
-function inputScore () {
-    enterInputEl.length()
+function timerScore () {
+    
+}
+
+
+function inputInitials () {
+    enterInputEl.textContent()
 }
 
 function displayScore () {
