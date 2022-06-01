@@ -15,8 +15,12 @@ var introEl = document.querySelector('#intro');
 var questionEl = document.querySelector('#questions');
 // Timer Variable
 var timerEl = document.querySelector('#timer');
-// Input Variable for Scoreboard w/ Initials
+// Input Dashboard Variable for Scoreboard w/ Initials
 var inputEl = document.querySelector('#input-init');
+// Information Input
+var enterInputEl = document.querySelector('enter-init');
+//Save Input
+var saveEl = document.querySelector('save');
 // Score Dashboard Variable
 var scoreBoardEl = document.querySelector('#score-dashboard');
 // Title Variable
@@ -107,12 +111,14 @@ answer4El.addEventListener("click", viewDashboard)
 
 
 function inputScore () {
-    
+    enterInputEl.length()
 }
 
 function displayScore () {
     scoreBoardEl.textContent()
 }
+
+// saveEl.addEventListener("click", inputScore)
 
 // if (answer1El==="Cascading StyleSheet") {
 //     timerEl.textContent= (timeRemains);
