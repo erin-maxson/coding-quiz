@@ -24,3 +24,14 @@ header {
     font-size: larger;
 }
 
+#startbtn {
+    background-color: purple;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#answer {
+    
+}
