@@ -46,22 +46,22 @@ var question = [ {
 // Question 1 w/ answers
     title: "What does the abbreviation CSS stand for?",
     answers: ["Coding Student Strategies", "Cascading Stylesheet", "HTML", "C++ Stylesheets"],
-    solution: "Cascading Stylesheet"
+    correct: "Cascading Stylesheet"
 },
 // Question 2 w/ answers
 {   title:"What is the abbreviation of Hypertext Markup Language?",
     answers:["HTML", "CSS", "JS", "None of the above"],
-    solution: "HTML"
+    correct: "HTML"
 },
 // Question 3 w/ answers
 {  title:"What must you do before using Bootstrap in your projects?",
     answers:["Add a reset CSS file", "Setup your HTML file", "Add the Bootstrap Library link to your HTML", "All of the above"],
-    solution: "All of the above"
+    correct: "All of the above"
 },
 // Question 4 w/ answers
 {  title:"How does CSS give priority to elements inside the file?",
     answers:["IDs have less precedence than Elements", "Universal Selector has precedence over all", "IDs have the highest precedence", "None of the above"],
-    solution: "IDs have the highest precedence"
+    correct: "IDs have the highest precedence"
 }
 
 ]
@@ -89,6 +89,14 @@ function displayQuestions() {
     answer2El.textContent = question[index].answers[1]
     answer3El.textContent = question[index].answers[2]
     answer4El.textContent = question[index].answers[3]
+
+    if (answers.correct) {
+        timeRemains = --0
+    }
+
+    else {
+        timeRemains = --5
+    }
 }
 
 // nextQuestion Function
