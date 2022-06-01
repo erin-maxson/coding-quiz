@@ -10,6 +10,14 @@ header {
     display: none;
 }
 
+.answer {
+    background-color: purple;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    margin: 5px;
+}
+
 #high-score {
     width: 80%;
 }
@@ -32,10 +40,7 @@ header {
     padding: 10px;
 }
 
-.answer {
-    background-color: purple;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#score-dashboard {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px;
-    margin: 5px;
 }
