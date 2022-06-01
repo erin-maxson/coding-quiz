@@ -32,6 +32,10 @@ header {
     padding: 10px;
 }
 
-#answer {
-    
+.answer {
+    background-color: purple;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    margin: 5px;
 }
