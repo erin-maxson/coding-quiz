@@ -13,9 +13,9 @@ Open the index.html file in your web browser to access the quiz.
 
 Begin the quiz by clicking "Begin Quiz!" and answer the questions as they appear. At the end of the quiz, enter your initials. If your score beats your previous highscores, your score will be shown in the window. 
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+    ![alt text](Assets/Images/start%20quiz.png)
+    ![alt text](Assets/Images/answer%20questions.png)
+    ![alt text](Assets/Images/quiz%20score%20dashboard.png)
 
 ## Credits
 
