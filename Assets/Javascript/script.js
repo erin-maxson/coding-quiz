@@ -48,33 +48,57 @@ var question = [ {
 // Question 1 w/ answers
     title: "What does the abbreviation CSS stand for?",
     answers: ["Coding Student Strategies", "Cascading Stylesheet", "HTML", "C++ Stylesheets"],
-    correct: "Cascading Stylesheet"
+    correct: answer2El
 },
 // Question 2 w/ answers
 {   title:"What is the abbreviation of Hypertext Markup Language?",
     answers:["HTML", "CSS", "JS", "None of the above"],
-    correct: "HTML"
+    correct: answer1El
 },
 // Question 3 w/ answers
 {   title:"What must you do before using Bootstrap in your projects?",
     answers:["Add a reset CSS file", "Setup your HTML file", "Add the Bootstrap Library link to your HTML", "All of the above"],
-    correct: "All of the above"
+    correct: answer4El
 },
 // Question 4 w/ answers
 {   title:"How does CSS give priority to elements inside the file?",
     answers:["IDs have less precedence than Elements", "Universal Selector has precedence over all", "IDs have the highest precedence", "None of the above"],
-    correct: "IDs have the highest precedence"
+    correct: answer3El
 }
 
 ]
 
 var index=0
 
-// Timer Countdown Function
-function countDown() {
-    timerEl.textContent=timeRemains
-    timeRemains--
+// nextQuestion Function
+function nextQuestion() {
+    index++
+    displayQuestions()
 }
+
+function checkAnswer(button) {
+    if (button.target===question[index].correct) {
+        answer1El
+        nextQuestion()
+    }
+
+    else {
+        timeRemains -=15
+    }
+
+}
+
+// Timer Countdown Function
+// function countDown() {
+//     clearInterval(clockID)
+    
+//     if
+    
+//     else {
+//     timerEl.textContent=timeRemains
+//     timeRemains--
+// }
+// }
 
 // startGame Function
 function startGame() {
@@ -93,11 +117,11 @@ function displayQuestions() {
     answer4El.textContent = question[index].answers[3]
 }
 
-// nextQuestion Function
-function nextQuestion() {
-    index++
-    displayQuestions()
-}
+// Clicking an answer leads to the next question
+answer1El.addEventListener("click", checkAnswer)
+answer2El.addEventListener("click", checkAnswer)
+answer3El.addEventListener("click", checkAnswer)
+answer4El.addEventListener("click", checkAnswer)
 
 // View Dashboard -- Hide Questions, Make Scoreboard & Input section visible
 function viewDashboard() {
@@ -106,22 +130,10 @@ function viewDashboard() {
     questionEl.classList.add("hide");
 }
 
-// Clicking an answer leads to the next question
-answer1El.addEventListener("click", nextQuestion)
-answer2El.addEventListener("click", nextQuestion)
-answer3El.addEventListener("click", nextQuestion)
-answer4El.addEventListener("click", viewDashboard)
 
-// function stopTimer() {
-//     if (viewDashboard) {
-//     clearInterval();
-//     }
-// }
-
-
-function timerScore () {
+// function timerScore () {
     
-}
+// }
 
 function inputInitials () {
     enterInputEl.length();
@@ -132,14 +144,6 @@ function displayScore () {
 }
 
 // saveEl.addEventListener("click", inputScore)
-
-// if (answers.correct) {
-//     timeRemains = --0
-// }
-
-// else {
-//     timeRemains = --5
-// }
 
 // start of game by clicking the start button
 startQuizBtn.addEventListener("click", startGame)
