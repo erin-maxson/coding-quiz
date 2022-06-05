@@ -158,10 +158,6 @@ function displayScore () {
     scoreBoardEl.textContent();
 }
 
-function inputInitials () {
-   
-}
-
 
 // start of game by clicking the start button
 startQuizBtn.addEventListener("click", startGame)

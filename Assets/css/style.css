@@ -55,9 +55,12 @@ header {
 
 #input-init {
     padding: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
 }
 
 #score-dashboard {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
     padding: 10px;
 }
