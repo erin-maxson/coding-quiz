@@ -156,7 +156,15 @@ answer4El.addEventListener("click", checkAnswer);
 
 function displayScore () {
     scoreBoardEl.textContent();
+
 }
+
+function saveToLocalStorage() {
+    localStorage.setItem('textinput', scoreBoardEl)
+
+    saveEl.addEventListener("click", saveToLocalStorage)
+}
+
 
 
 // start of game by clicking the start button
