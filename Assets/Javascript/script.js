@@ -73,10 +73,16 @@ var questions = [ {
 ]
 
 var index=0
+var maxQuestions = 4
 
 function countDown(){
     timerEl.textContent=timeRemains
      timeRemains--
+
+    if (timerEl === 0) {
+        viewDashboard();
+        clearInterval();
+    }
 }
 
 // displayQuestions Function
@@ -110,17 +116,33 @@ function checkAnswer(button) {
     }
 
     else {
-        timeRemains -=15
+       timeRemains -=15
+       nextQuestion()
        answerStatus.append("Wrong!")
     }
 
 }
 
+
 // Clicking an answer leads to the next question
-answer1El.addEventListener("click", checkAnswer)
-answer2El.addEventListener("click", checkAnswer)
-answer3El.addEventListener("click", checkAnswer)
-answer4El.addEventListener("click", checkAnswer)
+answer1El.addEventListener("click", (button) => {
+    checkAnswer();
+    nextQuestion();
+});
+
+answer2El.addEventListener("click", (button) => {
+    checkAnswer();
+    nextQuestion();
+});
+
+answer3El.addEventListener("click", (button) => {
+    checkAnswer();
+    nextQuestion();
+});
+answer4El.addEventListener("click", (button) => {
+    checkAnswer();
+    viewDashboard();
+});
 
 // View Dashboard -- Hide Questions, Make Scoreboard & Input section visible
 function viewDashboard() {
