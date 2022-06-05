@@ -40,6 +40,14 @@ header {
     padding: 10px;
 }
 
+#scorebtn {
+    background-color: purple;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
 #questions {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 15px;

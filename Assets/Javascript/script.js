@@ -13,6 +13,8 @@
 var introEl = document.querySelector('#intro');
 // High Score Variable
 var highScore = document.querySelector('#high-score');
+// See High Score Button Variable
+var scoreBtn = document.querySelector('#scorebtn')
 // Questions Variable
 var questionEl = document.querySelector('#questions');
 // Timer Variable
@@ -75,13 +77,16 @@ var questions = [ {
 var index=0
 var maxQuestions = 4
 
+function seeHighScores() {
+    scoreBtn.addEventListener("click", viewDashboard)
+}
+
 function countDown(){
     timerEl.textContent=timeRemains
      timeRemains--
 
-    if (timerEl === 0) {
+    if (timeRemains < 0) {
         viewDashboard();
-        clearInterval();
     }
 }
 
@@ -108,6 +113,7 @@ function nextQuestion() {
     displayQuestions()
 }
 
+// checks the answer for right or wrong and displays "correct!" or "wrong!"
 function checkAnswer(button) {
     if (button.target===questions[index].correct) {
         answer1El
@@ -125,24 +131,12 @@ function checkAnswer(button) {
 
 
 // Clicking an answer leads to the next question
-answer1El.addEventListener("click", (button) => {
-    checkAnswer();
-    nextQuestion();
-});
+answer1El.addEventListener("click", checkAnswer);
+answer2El.addEventListener("click", checkAnswer);
+answer3El.addEventListener("click", checkAnswer);
+answer4El.addEventListener("click", checkAnswer);
 
-answer2El.addEventListener("click", (button) => {
-    checkAnswer();
-    nextQuestion();
-});
-
-answer3El.addEventListener("click", (button) => {
-    checkAnswer();
-    nextQuestion();
-});
-answer4El.addEventListener("click", (button) => {
-    checkAnswer();
-    viewDashboard();
-});
+//after the last question, I want to show the score dashboard
 
 // View Dashboard -- Hide Questions, Make Scoreboard & Input section visible
 function viewDashboard() {
