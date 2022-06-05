@@ -77,8 +77,12 @@ var questions = [ {
 var index=0
 var maxQuestions = 4
 
-function seeHighScores() {
-    scoreBtn.addEventListener("click", viewDashboard)
+// View Dashboard -- Hide Questions, Make Scoreboard & Input section visible
+function viewDashboard() {
+    scoreBoardEl.classList.remove("hide");
+    inputEl.classList.remove("hide");
+    questionEl.classList.add("hide");
+    introEl.classList.add("hide");
 }
 
 function countDown(){
@@ -86,6 +90,7 @@ function countDown(){
      timeRemains--
 
     if (timeRemains < 0) {
+        questionEl.classList.add("hide");
         viewDashboard();
     }
 }
@@ -138,13 +143,9 @@ answer4El.addEventListener("click", checkAnswer);
 
 //after the last question, I want to show the score dashboard
 
-// View Dashboard -- Hide Questions, Make Scoreboard & Input section visible
-function viewDashboard() {
-    scoreBoardEl.classList.remove("hide");
-    inputEl.classList.remove("hide");
-    questionEl.classList.add("hide");
+if (answer4El === true || false) {
+    viewDashboard();
 }
-
 
 function inputInitials () {
     enterInputEl.length();
