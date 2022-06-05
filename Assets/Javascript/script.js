@@ -35,6 +35,8 @@ var answer2El = document.querySelector('#answer2');
 var answer3El = document.querySelector('#answer3');
 // Answer #4 Variable
 var answer4El = document.querySelector('#answer4');
+// Answer Status Variable
+var answerStatus = document.querySelector('#answer-status')
 
 // Start Quiz Button Selector
 var startQuizBtn = document.querySelector('#startbtn');
@@ -80,12 +82,12 @@ function checkAnswer(button) {
     if (button.target===question[index].correct) {
         answer1El
         nextQuestion()
-        // display.textContent("Correct!")
+        answerStatus.textContent("Correct!")
     }
 
     else {
         timeRemains -=15
-        // display.textContent("Wrong!")
+       answerStatus.textContent("Wrong!")
     }
 
 }
