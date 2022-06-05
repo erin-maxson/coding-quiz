@@ -45,6 +45,7 @@ var answerStatus = document.querySelector('#answer-status')
 // Start Quiz Button Selector
 var startQuizBtn = document.querySelector('#startbtn');
 
+
 // Timer Settings
 var timeRemains = 75
 var clockID = []
@@ -70,12 +71,17 @@ var questions = [ {
 {   title:"How does CSS give priority to elements inside the file?",
     answers:["IDs have less precedence than Elements", "Universal Selector has precedence over all", "IDs have the highest precedence", "None of the above"],
     correct: answer3El
+},
+// Question 5 w/ answers
+{   title:"What differentiates jQuery from Javascript?",
+    answers:["It's not developed in Javascript files", "The $ is used to differentiate jQuery", "It's exactly the same", "None of the above"],
+    correct: answer2El
 }
 
 ]
 
 var index=0
-var maxQuestions = 4
+var maxQuestions = 5
 
 // View Dashboard -- Hide Questions, Make Scoreboard & Input section visible
 function viewDashboard() {
@@ -109,6 +115,7 @@ function startGame() {
     questionEl.classList.remove("hide");
     introEl.classList.add("hide");
     clockID = setInterval (countDown, 1000);
+    availableQuestions = [...questions]
     displayQuestions();
 }
 
@@ -120,10 +127,14 @@ function nextQuestion() {
 
 // checks the answer for right or wrong and displays "correct!" or "wrong!"
 function checkAnswer(button) {
-    if (button.target===questions[index].correct) {
+    if (button.target===questions[4]) {
+        viewDashboard();
+    }
+    
+    else if (button.target===questions[index].correct) {
         answer1El
-        nextQuestion()
-        answerStatus.append("Correct!")
+        nextQuestion();
+        answerStatus.append("Correct!");
     }
 
     else {
@@ -134,7 +145,6 @@ function checkAnswer(button) {
 
 }
 
-
 // Clicking an answer leads to the next question
 answer1El.addEventListener("click", checkAnswer);
 answer2El.addEventListener("click", checkAnswer);
@@ -143,17 +153,15 @@ answer4El.addEventListener("click", checkAnswer);
 
 //after the last question, I want to show the score dashboard
 
-if (answer4El === true || false) {
-    viewDashboard();
+
+function displayScore () {
+    scoreBoardEl.textContent();
 }
 
 function inputInitials () {
-    enterInputEl.length();
+   
 }
 
-function displayScore () {
-    scoreBoardEl.textContent()
-}
 
 // start of game by clicking the start button
 startQuizBtn.addEventListener("click", startGame)
