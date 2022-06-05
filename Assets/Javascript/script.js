@@ -80,12 +80,12 @@ function checkAnswer(button) {
     if (button.target===question[index].correct) {
         answer1El
         nextQuestion()
-        display.textContent("Correct!")
+        // display.textContent("Correct!")
     }
 
     else {
         timeRemains -=15
-        display.textContent("Wrong!")
+        // display.textContent("Wrong!")
     }
 
 }
