@@ -80,25 +80,15 @@ function checkAnswer(button) {
     if (button.target===question[index].correct) {
         answer1El
         nextQuestion()
+        display.textContent("Correct!")
     }
 
     else {
         timeRemains -=15
+        display.textContent("Wrong!")
     }
 
 }
-
-// Timer Countdown Function
-// function countDown() {
-//     clearInterval(clockID)
-    
-//     if
-    
-//     else {
-//     timerEl.textContent=timeRemains
-//     timeRemains--
-// }
-// }
 
 // startGame Function
 function startGame() {
@@ -131,10 +121,6 @@ function viewDashboard() {
 }
 
 
-// function timerScore () {
-    
-// }
-
 function inputInitials () {
     enterInputEl.length();
 }
@@ -142,8 +128,6 @@ function inputInitials () {
 function displayScore () {
     scoreBoardEl.textContent()
 }
-
-// saveEl.addEventListener("click", inputScore)
 
 // start of game by clicking the start button
 startQuizBtn.addEventListener("click", startGame)
