@@ -17,6 +17,8 @@ var highScore = document.querySelector('#high-score');
 var questionEl = document.querySelector('#questions');
 // Timer Variable
 var timerEl = document.querySelector('#timer');
+//Start Time Variable
+var startTimeEl = document.querySelector('start-time');
 // Input Dashboard Variable for Scoreboard w/ Initials
 var inputEl = document.querySelector('#input-init');
 // Information Input
@@ -46,7 +48,7 @@ var timeRemains = 75
 var clockID = []
 
 // Question functions
-var question = [ {
+var questions = [ {
 // Question 1 w/ answers
     title: "What does the abbreviation CSS stand for?",
     answers: ["Coding Student Strategies", "Cascading Stylesheet", "HTML", "C++ Stylesheets"],
@@ -72,6 +74,28 @@ var question = [ {
 
 var index=0
 
+function countDown(){
+    timerEl.textContent=timeRemains
+     timeRemains--
+}
+
+// displayQuestions Function
+function displayQuestions() {
+    titleEl.textContent = questions[index].title
+    answer1El.textContent = questions[index].answers[0]
+    answer2El.textContent = questions[index].answers[1]
+    answer3El.textContent = questions[index].answers[2]
+    answer4El.textContent = questions[index].answers[3]
+}
+
+// startGame Function
+function startGame() {
+    questionEl.classList.remove("hide");
+    introEl.classList.add("hide");
+    clockID = setInterval (countDown, 1000);
+    displayQuestions();
+}
+
 // nextQuestion Function
 function nextQuestion() {
     index++
@@ -79,34 +103,17 @@ function nextQuestion() {
 }
 
 function checkAnswer(button) {
-    if (button.target===question[index].correct) {
+    if (button.target===questions[index].correct) {
         answer1El
         nextQuestion()
-        answerStatus.textContent("Correct!")
+        answerStatus.append("Correct!")
     }
 
     else {
         timeRemains -=15
-       answerStatus.textContent("Wrong!")
+       answerStatus.append("Wrong!")
     }
 
-}
-
-// startGame Function
-function startGame() {
-    questionEl.classList.remove("hide");
-    introEl.classList.add("hide");
-    clockID = setInterval(countDown,1000);
-    displayQuestions();
-}
-
-// displayQuestions Function
-function displayQuestions() {
-    titleEl.textContent = question[index].title
-    answer1El.textContent = question[index].answers[0]
-    answer2El.textContent = question[index].answers[1]
-    answer3El.textContent = question[index].answers[2]
-    answer4El.textContent = question[index].answers[3]
 }
 
 // Clicking an answer leads to the next question
