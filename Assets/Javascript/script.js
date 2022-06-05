@@ -146,10 +146,10 @@ function checkAnswer(button) {
 }
 
 // Clicking an answer leads to the next question
-answer1El.addEventListener("click", checkAnswer);
-answer2El.addEventListener("click", checkAnswer);
-answer3El.addEventListener("click", checkAnswer);
-answer4El.addEventListener("click", checkAnswer);
+answer1El.addEventListener("click", nextQuestion);
+answer2El.addEventListener("click", nextQuestion);
+answer3El.addEventListener("click", nextQuestion);
+answer4El.addEventListener("click", nextQuestion);
 
 //after the last question, I want to show the score dashboard
 
